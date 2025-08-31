@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  youtube-downloader-app:
+    build: .
+    volumes:
+      - ./app:/app
+      - ./downloads:/downloads
+    ports:
+      - "8082:8081"
+    environment:
+      - TZ=America/New_York
+    container_name: youtube_downloader_app_v1
